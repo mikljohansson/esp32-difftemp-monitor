@@ -127,6 +127,9 @@ void setup() {
     pinMode(DTM_BUTTON_PIN, INPUT);
     attachInterrupt(DTM_BUTTON_PIN, handleCalibrateButtonPress, FALLING);
 
+    pinMode(DTM_BUTTON_PIN2, INPUT_PULLUP);
+    attachInterrupt(DTM_BUTTON_PIN2, handleCalibrateButtonPress, FALLING);
+
     calibrationRequested = 0;
 }
 
